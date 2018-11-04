@@ -1,6 +1,4 @@
-
 # Created by https://www.gitignore.io/api/java,maven,intellij
-# Edit at https://www.gitignore.io/?templates=java,maven,intellij
 
 ### Intellij ###
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio and WebStorm
@@ -33,9 +31,9 @@
 # When using Gradle or Maven with auto-import, you should exclude module files,
 # since they will be recreated, and may cause churn.  Uncomment if using
 # auto-import.
-# .idea/modules.xml
-# .idea/*.iml
-# .idea/modules
+.idea/modules.xml
+.idea/*.iml
+.idea/modules
 
 # CMake
 cmake-build-*/
@@ -73,10 +71,10 @@ fabric.properties
 ### Intellij Patch ###
 # Comment Reason: https://github.com/joeblau/gitignore.io/issues/186#issuecomment-215987721
 
-# *.iml
-# modules.xml
-# .idea/misc.xml
-# *.ipr
+*.iml
+modules.xml
+.idea/misc.xml
+*.ipr
 
 # Sonarlint plugin
 .idea/sonarlint
