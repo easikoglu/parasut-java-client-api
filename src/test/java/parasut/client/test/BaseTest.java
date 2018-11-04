@@ -116,12 +116,13 @@ public class BaseTest {
      */
     @Test
     public void getToken_withRefreshTokenRequest() {
-        ParasutGetToken parasutRefreshedToken = ParasutGetToken.refresh(httpOptions, ParasutAuthRefreshRequest.builder()
-                .refresh_token(parasutGetToken.getRefresh_token())
-                .clientId(httpOptions.getApiKey())
-                .clientSecret(httpOptions.getSecretKey())
-                .redirectUri(redirectUri)
-                .grant_type(ParasutGrantType.REFRESH_TOKEN.getValue()).build());
+        ParasutGetToken parasutRefreshedToken = ParasutGetToken
+                .refresh(httpOptions, ParasutAuthRefreshRequest.builder()
+                        .refresh_token(parasutGetToken.getRefresh_token())
+                        .clientId(httpOptions.getApiKey())
+                        .clientSecret(httpOptions.getSecretKey())
+                        .redirectUri(redirectUri)
+                        .grant_type(ParasutGrantType.REFRESH_TOKEN.getValue()).build());
 
         assertThat(parasutRefreshedToken.getToken_type(), equalTo("bearer"));
     }
