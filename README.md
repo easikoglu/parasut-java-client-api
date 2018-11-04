@@ -1,6 +1,6 @@
 # Parasut Rest Api (V4) Java Client
 
-This is the java client library for provind easy use of [parasut api](https://apidocs.parasut.com/) **v4**. [Parasut](https://www.parasut.com/) is the most commonly used, cloud based pre-accounting tool in Turkey. 
+This is the java client library purely written using apache http client for [parasut api](https://apidocs.parasut.com/) **v4**. [Parasut](https://www.parasut.com/) is the most commonly used, cloud based pre-accounting tool in Turkey. 
 
 #### Note 
 This client api currenty  supports below functionalities :
@@ -60,7 +60,7 @@ to get starting using api.parasut.com/v4 you have to first get token information
             .redirectUri(redirectUri)  
             .grant_type(ParasutGrantType.PASSWORD.getValue()).build());
       
-### Resfresh Token
+### Refresh Token
 
    Token can be invalidated in a given time period, you can check that time in the GetToken response. So to be able to get new refreshed token you can use refresh token request. 
 
