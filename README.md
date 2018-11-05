@@ -18,7 +18,12 @@ This client api currenty  supports below functionalities :
 ### Maven users
 Add this library to your projects build file (pom.xml) 
 
-    will be updated!
+    <dependency>
+      <groupId>io.github.easikoglu</groupId>
+      <artifactId>parasut-java-client-api</artifactId>
+      <version>1.0.0</version>
+      <classifier>javadoc</classifier>
+    </dependency>
     
 ### Build From Source 
 With your teminal window run below command in the root folder of the project ( where pom.xml located).
