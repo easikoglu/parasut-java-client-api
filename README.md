@@ -73,6 +73,8 @@ to get starting using api.parasut.com/v4 you have to first get token information
                     .clientSecret(httpOptions.getSecretKey())  
                     .redirectUri(redirectUri)  
                     .grant_type(ParasutGrantType.REFRESH_TOKEN.getValue()).build());
+
+
 ### Create Contact
 Before creating a sales_invoice in parasut api you need to create and get contact id on parasut api first. After that request you can map returning id (parasutContactId) with your user id to prevent to create duplicate records on parasut api.
 
@@ -86,8 +88,8 @@ Before creating a sales_invoice in parasut api you need to create and get contac
                     .token(BEARER + parasutGetToken.getAccess_token())  
                     .build()  
     );
-### Create Product
 
+### Create Product
 Even you have your product catalog in house application, you need to create your product copy on parasut system with not-detailed product information. After you create related product on parasut you need to map your product id with parasutProductId. 
   
     ParasutProduct parasutProduct = ParasutProduct.create(httpOptions, ParasutProductRequest.builder()  
@@ -99,8 +101,9 @@ Even you have your product catalog in house application, you need to create your
                     .companyId(companyId)  
                     .token(BEARER + parasutGetToken.getAccess_token())  
                     .build());
-### Create Invoice
 
+
+### Create Invoice
 After you successfully created product and contact information on parasut system now you ready to create sales_invoice via parasut api endpoint. 
 All you need to do gather api related informations as in example below : 
 
