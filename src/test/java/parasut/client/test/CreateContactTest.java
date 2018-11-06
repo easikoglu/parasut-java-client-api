@@ -25,7 +25,7 @@ public class CreateContactTest extends BaseTest {
                         .build(),
                 ParasutSimpleRequest.builder()
                         .companyId(companyId)
-                        .token(BEARER + parasutGetToken.getAccess_token())
+                        .token(parasutGetToken.getAccessToken())
                         .build()
         );
         assertThat(parasutContact.getData().getAttributes().get("email"), equalTo("test@parasut.com"));

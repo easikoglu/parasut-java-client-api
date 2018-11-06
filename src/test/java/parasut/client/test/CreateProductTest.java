@@ -25,7 +25,7 @@ public class CreateProductTest extends BaseTest {
                         .build(),
                 ParasutSimpleRequest.builder()
                         .companyId(companyId)
-                        .token(BEARER + parasutGetToken.getAccess_token())
+                        .token(parasutGetToken.getAccessToken())
                         .build());
         assertThat(parasutProduct.getData().getAttributes().get("code"), equalTo("testProductCode"));
 

@@ -13,10 +13,10 @@ import java.time.LocalDateTime;
 public class ParasutGetToken {
 
 
-    String access_token;
-    String refresh_token;
-    String token_type;
-    Integer expires_in;
+    String accessToken;
+    String refreshToken;
+    String tokenType;
+    Integer expiresIn;
     LocalDateTime expireDate;
 
 
@@ -35,20 +35,20 @@ public class ParasutGetToken {
                 .get(ParasutGetToken.class);
     }
 
-    public String getAccess_token() {
-        return access_token;
+    public String getAccessToken() {
+        return accessToken;
     }
 
-    public String getRefresh_token() {
-        return refresh_token;
+    public String getRefreshToken() {
+        return refreshToken;
     }
 
-    public String getToken_type() {
-        return token_type;
+    public String getTokenType() {
+        return tokenType;
     }
 
-    public Integer getExpires_in() {
-        return expires_in;
+    public Integer getExpiresIn() {
+        return expiresIn;
     }
 
     public LocalDateTime getExpireDate() {
@@ -59,10 +59,10 @@ public class ParasutGetToken {
     @Override
     public String toString() {
         return "ParasutGetToken{" +
-                "access_token='" + access_token + '\'' +
-                ", refresh_token='" + refresh_token + '\'' +
-                ", token_type='" + token_type + '\'' +
-                ", expires_in=" + expires_in +
+                "accessToken='" + accessToken + '\'' +
+                ", refreshToken='" + refreshToken + '\'' +
+                ", tokenType='" + tokenType + '\'' +
+                ", expiresIn=" + expiresIn +
                 ", expireDate=" + expireDate +
                 '}';
     }

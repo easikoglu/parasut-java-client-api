@@ -36,7 +36,7 @@ public class CreateSalesInvoiceTest extends BaseTest {
                         .build(),
                 ParasutSimpleRequest.builder()
                         .companyId(companyId)
-                        .token(BEARER + parasutGetToken.getAccess_token())
+                        .token(parasutGetToken.getAccessToken())
                         .build()
         );
         //create a product in parasut api / you can map parasutProductId with your own productId then reuse it
@@ -47,7 +47,7 @@ public class CreateSalesInvoiceTest extends BaseTest {
                         .build(),
                 ParasutSimpleRequest.builder()
                         .companyId(companyId)
-                        .token(BEARER + parasutGetToken.getAccess_token())
+                        .token(parasutGetToken.getAccessToken())
                         .build());
 
         //trigger sales_invoice request
@@ -64,7 +64,7 @@ public class CreateSalesInvoiceTest extends BaseTest {
                         .build(),
                 ParasutSimpleRequest.builder()
                         .companyId(companyId)
-                        .token(BEARER + parasutGetToken.getAccess_token())
+                        .token(parasutGetToken.getAccessToken())
                         .build());
 
         assertNotNull(parasutInvoice.getData().getId());

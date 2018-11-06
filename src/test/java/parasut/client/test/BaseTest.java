@@ -49,7 +49,6 @@ import static org.junit.Assert.assertThat;
 public class BaseTest {
 
 
-    public static final String BEARER = "Bearer ";
     static HttpOptions httpOptions;
 
 
@@ -107,7 +106,7 @@ public class BaseTest {
     @Test
     public void getAuthToken_withPasswordGrantType() {
         log.info(parasutGetToken.toString());
-        assertThat(parasutGetToken.getToken_type(), equalTo("bearer"));
+        assertThat(parasutGetToken.getTokenType(), equalTo("bearer"));
 
     }
 
@@ -118,13 +117,13 @@ public class BaseTest {
     public void getToken_withRefreshTokenRequest() {
         ParasutGetToken parasutRefreshedToken = ParasutGetToken
                 .refresh(httpOptions, ParasutAuthRefreshRequest.builder()
-                        .refresh_token(parasutGetToken.getRefresh_token())
+                        .refresh_token(parasutGetToken.getRefreshToken())
                         .clientId(httpOptions.getApiKey())
                         .clientSecret(httpOptions.getSecretKey())
                         .redirectUri(redirectUri)
                         .grant_type(ParasutGrantType.REFRESH_TOKEN.getValue()).build());
 
-        assertThat(parasutRefreshedToken.getToken_type(), equalTo("bearer"));
+        assertThat(parasutRefreshedToken.getTokenType(), equalTo("bearer"));
     }
 
 
